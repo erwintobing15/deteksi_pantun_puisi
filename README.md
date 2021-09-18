@@ -6,7 +6,7 @@ and *puisi* from a text poem. The project was built using django with it's detec
 ## Technologies 
 This project is created with:
 * Python 3.9.1
-* Django 3.2.6
+* Django 3.2
 * Anaconda 4.10.3
 * Scikit-learn 0.24.2
 * Bootstrap 5.1.1
@@ -14,8 +14,7 @@ This project is created with:
 ## Setup 
 To run this project, install it locally using conda:
 ```
-conda create -n django-env python=3.9.1 anaconda  
-conda activate django-env
-conda install -c anaconda django 
+conda create -n myenv python=3.9.1 django=3.2 scikit-learn=0.24.2
+conda activate myenv or activate myenv 
 python manage.py runserver 
 ```
