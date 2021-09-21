@@ -1,9 +1,16 @@
-from django.http import HttpResponse
-from django.template import loader
+from django.shortcuts import render
 
 def index(request):
-    template = loader.get_template('detection/home.html')
-    context = {
-        'page': "Halaman index",
-    }
-    return HttpResponse(template.render(context, request))
+
+    # if there is a POST request we need to process the form data
+    if request.method == 'POST':
+
+        poem = request.POST.get('inputPoem')
+
+        context = {
+            'poem': poem,
+        }
+    else:
+        context = {}
+
+    return render(request, 'detection/home.html', context)
