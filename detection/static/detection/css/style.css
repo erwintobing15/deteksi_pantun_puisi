@@ -1,7 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap');
+
+* {
+  font-family: 'Epilogue', sans-serif;
+}
+
 body {
-  background-color: #75bff5;
+  background-color: #50D890;
 }
 
 .navbar {
-  background-color: #fff;
+  background-color: #EFFFFB;
+}
+
+.home-content {
+  padding-top: 75px;
+}
+
+.poem, .poem-type {
+  text-align: center;
 }
