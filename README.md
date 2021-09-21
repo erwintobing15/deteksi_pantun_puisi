@@ -1,9 +1,9 @@
 # deteksi_pantun_puisi
 
-This is a machine learning web based application that can detect type of indonesian poem between *pantun* 
+This is a machine learning web based application that can detect type of indonesian poem between *pantun*
 and *puisi* from a text poem. The project was built using django with it's detection feature built with SVM model [poem-type-classification](https://github.com/erwintobing15/poem-type-classification).
 
-## Technologies 
+## Technologies
 This project is created with:
 * Python 3.9.1
 * Django 3.2
@@ -11,10 +11,10 @@ This project is created with:
 * Scikit-learn 0.24.2
 * Bootstrap 5.1.1
 
-## Setup 
+## Setup
 To run this project, install it locally using conda:
 ```
 conda create -n myenv python=3.9.1 django=3.2 scikit-learn=0.24.2
-conda activate myenv or activate myenv 
-python manage.py runserver 
+conda activate myenv or activate myenv
+python manage.py runserver
 ```
