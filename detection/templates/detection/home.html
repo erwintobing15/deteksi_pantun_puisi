@@ -10,7 +10,7 @@
         <h4>Masukkan pantun atau puisi disini</h4>
         <form  action="" method="post">
           {% csrf_token %}
-          <textarea name="inputPoem" rows="15"></textarea><br>
+          <textarea id="poemInput" name="poemInput" rows="15">{% if poem %}{{poem}}{% endif %}</textarea><br>
           <input type="submit" class="square_btn" value="Periksa"/>
         </form>
       </div>
@@ -19,7 +19,7 @@
         <h4>Jenis karya sastra pantun atau puisi</h4>
         <div class="result">
           {% if poem_type %}
-            <h5>{{poem_type}}</h5>
+            <h5 id="poemType">{{poem_type}}</h5>
           {% endif %}
         </div>
         <div class="progress">
@@ -28,10 +28,10 @@
             aria-valuenow="{{probability}}" aria-valuemin="0" aria-valuemax="100">{{probability}}%</div>
           {% else %}
             <div class="progress-bar" role="progressbar" style="width: 0%;"
-            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+             aria-valuemin="0" aria-valuemax="100">0%</div>
           {% endif %}
         </div>
-        <a class="square_btn" href="{% url 'detection:index' %}">Reset</a>
+        <a class="square_btn" href="">Reset</a>
       </div>
     </div>
   </div>
