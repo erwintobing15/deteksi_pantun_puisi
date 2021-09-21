@@ -3,7 +3,33 @@
 {% block title %}Deteksi Pantun dan Puisi{% endblock %}
 
 {% block content %}
-  <div class="home-content">
-    <h1>home content</h1>
+  <div class="container home-content">
+    <div class="row">
+      <!-- textarea to input poem -->
+      <div class="poem col-12 col-sm-6">
+        <h4>Masukkan pantun atau puisi disini</h4>
+        <textarea name="name" rows="15"></textarea><br>
+        <button class="square_btn" type="button" name="button">Periksa</button>
+      </div>
+      <!-- poem type and it's detection percentage -->
+      <div class="poem-type col-12 col-sm-6">
+        <h4>Jenis karya sastra pantun atau puisi</h4>
+        <div class="result">
+          {% if poem_type %}
+            <h5>{{poem_type}}</h5>
+          {% endif %}
+        </div>
+        <div class="progress">
+          {% if percentage %}
+            <div class="progress-bar" role="progressbar" style="width: {{percentage}}%;"
+            aria-valuenow="{{percentage}}" aria-valuemin="0" aria-valuemax="100">{{percentage}}%</div>
+          {% else %}
+            <div class="progress-bar" role="progressbar" style="width: 0%;"
+            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+          {% endif %}
+        </div>
+        <button class="square_btn" type="button" name="button">Reset</button>
+      </div>
+    </div>
   </div>
 {% endblock %}
