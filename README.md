@@ -12,9 +12,13 @@ This project is created with:
 * Bootstrap 5.1.1
 
 ## Setup
-To run this project, install it locally using conda:
+To run this project, install it locally using conda or pip:
 ```
-conda create -n myenv python=3.9.1 django=3.2 scikit-learn=0.24.2
+conda create -n myenv python=3.9 django=3.2 scikit-learn=0.24.2
 conda activate myenv or activate myenv
+python manage.py runserver
+
+pip install django
+pip install scikit-learn
 python manage.py runserver
 ```
