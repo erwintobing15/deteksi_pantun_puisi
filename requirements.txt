@@ -1,3 +1,0 @@
-python==3.9.1
-Django==3.2.7
-scikit-learn==0.24.2
