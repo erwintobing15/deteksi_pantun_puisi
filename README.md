@@ -16,23 +16,39 @@ This project is created with:
 * Bootstrap 5.1.1
 
 ## Setup
-To run this project, open cmd/terminal on project directory and install it locally using conda:
+How to run this project and install it locally:
+1. Clone the project
 ```
-conda create -n myenv python==3.9.1 django==3.2.7 scikit-learn==0.24.2
-conda activate myenv or activate myenv
-python manage.py runserver
-
-conda deactivate
+git clone https://github.com/erwintobing15/deteksi_pantun_puisi.git
+cd deteksi_pantun_puisi
 ```
-or install it using pip as administrator:
+2. Create virtualenv or you can go ahead to step 3 without creating virtualenv
 ```
+# using conda
+conda create -n newenv
+conda activate newenv or activate newenv
+```
+```
+# using pip as administrator
 pip install virtualenv
-virtualenv myenv
-myenv\Scripts\activate or source myenv/bin/activate
-
-pip install django==3.2.7
-pip install scikit-learn==0.24.2
+virtualenv newenv
+newenv\Scripts\activate or source newenv/bin/activate
+```
+3. Install all dependencies
+```
+pip install -r requirements.txt
+```
+4. Run server
+```
 python manage.py runserver
+```
+5. Deactivate and delete virtualenv (if you created one)
+```
+# deactivate virtualenv
+conda deactivate or deactivate
 
-deactivate
+# delete virtualenv using conda
+conda env remove --name newenv
+
+# there is no command to delete virtualenv using pip, so we need to delete it manually
 ```
